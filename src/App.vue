@@ -8,8 +8,9 @@
     }
 </script>
 
-<style lang="sass">
-    button
-        background: red
+<style lang="scss">
+    button{
+        background: red;
+    }
 </style>
 
