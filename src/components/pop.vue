@@ -1,5 +1,8 @@
 <template>
-    <h1 v-text="counter"></h1>
+    <div>
+        <h1 v-text="counter"></h1>
+        <button @click="increment">increment</button>
+    </div>
 </template>
 
 <script>
@@ -14,6 +17,7 @@ export default {
     methods: {
         increment () {
             this.counter++
+            this.$store.commit('increment')
         }
     }
 }

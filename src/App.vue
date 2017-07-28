@@ -1,9 +1,15 @@
 <template class="app">
-    <pop v-text="count"></pop>
+    <div>
+        <h1>count: {{ count }}</h1>
+        <pop></pop>
+    </div>
 </template>
 
 <script>
+
 import pop from './components/pop'
+import {mapState} from 'vuex'
+
 export default {
     name: 'App',
     data () {
@@ -12,9 +18,7 @@ export default {
         }
     },
     computed: {
-        count () {
-            return this.$store.state.count
-        }
+        ...mapState(['count'])
     },
     components: {
         pop
