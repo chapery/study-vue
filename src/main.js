@@ -10,6 +10,11 @@ let store = new Vuex.Store({
     state: {
         count: 0
     },
+    getters: {
+        doElse (state) {
+            return state.count * 10
+        }
+    },
     mutations: {
         increment (state) {
             state.count++

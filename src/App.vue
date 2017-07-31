@@ -8,7 +8,7 @@
 <script>
 
 import pop from './components/pop'
-import {mapState} from 'vuex'
+import vuex from 'vuex'
 
 export default {
     name: 'App',
@@ -18,7 +18,9 @@ export default {
         }
     },
     computed: {
-        ...mapState(['count'])
+        ...vuex.mapState({
+            count: state => state.count
+        })
     },
     components: {
         pop
